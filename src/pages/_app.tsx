@@ -1,12 +1,22 @@
 import type { AppProps } from "next/app";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { Header } from "../components/Header";
+import localFont from "next/font/local";
+
+export const BebasNeueRegular = localFont({ src: "../fonts/BebasNeue-Regular.ttf" });
+export const LatoMedium = localFont({ src: "../fonts/Lato-Medium.ttf" });
+
+const theme = {
+  primary: "rgba(1, 28, 39, 1)",
+  contrast: "rgba(245, 237, 240, 1)",
+};
 
 const GlobalStyles = createGlobalStyle`
 html,
 body {
     padding: 0;
     margin: 0;
+    background-color: ${({ theme }) => theme.contrast};
 }
 
 a {
@@ -16,13 +26,9 @@ a {
 
 * {
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
+    font-family: ${LatoMedium.style.fontFamily};
 }
 `;
-
-const theme = {
-  contrast: "rgba(245, 237, 240, 1)",
-};
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
