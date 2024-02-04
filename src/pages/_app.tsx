@@ -2,6 +2,8 @@ import type { AppProps } from "next/app";
 import { ThemeProvider, createGlobalStyle } from "styled-components";
 import { Header } from "../components/Header";
 import localFont from "next/font/local";
+import Head from "next/head";
+import favicon from "/public/images/favicon.ico";
 
 export const BebasNeueRegular = localFont({ src: "../fonts/BebasNeue-Regular.ttf" });
 export const LatoMedium = localFont({ src: "../fonts/Lato-Medium.ttf" });
@@ -32,10 +34,17 @@ a {
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <Header />
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <>
+      <Head>
+        <title>Новости для каждого</title>
+        <link rel="shortcut icon" href={favicon.src} />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+      </Head>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <Header />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </>
   );
 }

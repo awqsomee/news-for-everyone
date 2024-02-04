@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import bannerCover from "../../images/bannerCover.png";
+import bannerCover from "/public/images/bannerCover.png";
 import { BebasNeueRegular } from "../../pages/_app";
 
 export const Banner = () => {
