@@ -8,5 +8,5 @@ export const Container = styled.div`
   align-items: center;
   width: 100vw;
   padding: 0 264px;
-  height: calc(100vh - ${HeaderHeigth});
+  min-height: calc(100vh - ${HeaderHeigth});
 `;

@@ -11,6 +11,7 @@ export const LatoMedium = localFont({ src: "../fonts/Lato-Medium.ttf" });
 const theme = {
   primary: "rgba(1, 28, 39, 1)",
   contrast: "rgba(245, 237, 240, 1)",
+  secondary: "rgba(167, 158, 183, 1)",
 };
 
 const GlobalStyles = createGlobalStyle`

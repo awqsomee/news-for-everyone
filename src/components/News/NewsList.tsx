@@ -1,12 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { Filter } from "../Filters/Filter";
+import { Filter } from "../Preferences/Filter";
 import { Feed } from "./Feed";
+import { Preferences } from "../Preferences/Preferences";
 
 export const NewsList = () => {
   return (
     <Layout>
-      <Filter />
+      <Preferences />
       <Feed />
     </Layout>
   );
