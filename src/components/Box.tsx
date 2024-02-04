@@ -1,18 +1,15 @@
 import React from "react";
+import styled from "styled-components";
 
 export const Box = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        width: "100vw",
-        height: "100vh",
-      }}
-    >
-      {children}
-    </div>
-  );
+  return <BoxLayout>{children}</BoxLayout>;
 };
+
+const BoxLayout = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+`;
