@@ -4,21 +4,34 @@ import { Box } from "../Box";
 import { Labels } from "./Labels";
 import { Categories } from "./Categories";
 
-const initSections = {
-  Все: true,
-  Политика: false,
-  Общество: false,
-  Экономика: false,
-  Финансы: false,
-  Спорт: false,
-  Технологии: false,
-  Культура: false,
-  Наука: false,
-  Туризм: false,
-  Недвижимость: false,
-};
+export type Section =
+  | "Все"
+  | "Политика"
+  | "Общество"
+  | "Экономика"
+  | "Финансы"
+  | "Спорт"
+  | "Технологии"
+  | "Культура"
+  | "Наука"
+  | "Туризм"
+  | "Недвижимость";
 
-const initCategories = {
+const sections: Section[] = [
+  "Все",
+  "Политика",
+  "Общество",
+  "Экономика",
+  "Финансы",
+  "Спорт",
+  "Технологии",
+  "Культура",
+  "Наука",
+  "Туризм",
+  "Недвижимость",
+];
+
+const categories = {
   Политика: {
     Власть: false,
     "Социальная справедливость": false,
@@ -93,17 +106,13 @@ const initCategories = {
 };
 
 export const Preferences = () => {
-  const [sections, setSections] = useState<Record<string, boolean>>(initSections);
+  const [section, setSection] = useState<Section>("Все");
   return (
-    <Box ai="flex-start">
-      <Box ai="flex-start">
-        <Filter list={sections} defaultList={initSections} onChange={(sections) => setSections(sections)} />
     <Box $ai="flex-start">
       <Box $ai="flex-start">
+        <Filter type="array" current={section} filters={sections} setFilter={(section) => setSection(section)} />
       </Box>
-      {Object.keys(sections).map(
-        (section) => sections[section] && section !== "Все" && <Categories initState={initCategories[section]} />
-      )}
+      {section !== "Все" && <Categories initState={categories[section]} />}
       <Labels />
     </Box>
   );

@@ -16,7 +16,7 @@ export const Toggle = ({
 }) => {
   return (
     <Label>
-      <InvisibleInput type="checkbox" checked={state} onChange={setState} />
+      <InvisibleInput type="checkbox" checked={!!state} onChange={setState} />
       <Span type={type}>{label}</Span>
     </Label>
   );
@@ -31,7 +31,7 @@ const Label = styled.label`
 
 const Span = styled.span<{ type?: FilterType }>`
   border: 2px solid ${({ theme, type }) => (type === "secondary" ? theme.secondary : theme.primary)};
-  padding: 10px 20px 11px;
+  padding: ${({ theme, type }) => (type === "secondary" ? "8px 16px 9px 16px" : "10px 20px 11px")};
 
   /* width: 27px;
   height: 22px; */
