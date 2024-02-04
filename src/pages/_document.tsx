@@ -4,7 +4,9 @@ import StyledComponentsRegistry from "../lib/registry";
 export default function Document() {
   return (
     <Html>
-      <Head />
+      <Head>
+        <title>Новости для каждого</title>
+      </Head>
       <body>
         <StyledComponentsRegistry>
           <Main />
