@@ -8,6 +8,7 @@ export const Header = () => {
     <Layout>
       <Logo>ВАШ ЛОГОТИП</Logo>
       <Search />
+        <Box $fd="row" $jc="space-between">
     </Layout>
   );
 };

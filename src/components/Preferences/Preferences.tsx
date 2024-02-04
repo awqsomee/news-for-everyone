@@ -98,6 +98,8 @@ export const Preferences = () => {
     <Box ai="flex-start">
       <Box ai="flex-start">
         <Filter list={sections} defaultList={initSections} onChange={(sections) => setSections(sections)} />
+    <Box $ai="flex-start">
+      <Box $ai="flex-start">
       </Box>
       {Object.keys(sections).map(
         (section) => sections[section] && section !== "Все" && <Categories initState={initCategories[section]} />
