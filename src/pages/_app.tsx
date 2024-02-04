@@ -1,9 +1,10 @@
 import type { AppProps } from "next/app";
-import { ThemeProvider, createGlobalStyle } from "styled-components";
+import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import { Header } from "../components/Header";
 import localFont from "next/font/local";
 import Head from "next/head";
 import favicon from "/public/images/favicon.ico";
+import { Center } from "../ui/Center";
 
 export const BebasNeueRegular = localFont({ src: "../fonts/BebasNeue-Regular.ttf" });
 export const LatoMedium = localFont({ src: "../fonts/Lato-Medium.ttf" });
@@ -15,11 +16,10 @@ const theme = {
 };
 
 const GlobalStyles = createGlobalStyle`
-html,
 body {
-    padding: 0;
-    margin: 0;
-    background-color: ${({ theme }) => theme.contrast};
+  padding: 0;
+  margin: 0;
+  background-color: ${({ theme }) => theme.contrast};
 }
 
 a {
@@ -30,6 +30,10 @@ a {
 * {
     box-sizing: border-box;
     font-family: ${LatoMedium.style.fontFamily};
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
 }
 `;
 
@@ -43,8 +47,10 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <Header />
-        <Component {...pageProps} />
+        <Center>
+          <Header />
+          <Component {...pageProps} />
+        </Center>
       </ThemeProvider>
     </>
   );
