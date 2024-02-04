@@ -1,9 +1,13 @@
-import { Box } from "../components/Box";
+import styled from "styled-components";
+import { Container } from "../components/Container";
+import { Banner } from "../components/News/Banner";
+import { NewsList } from "../components/News/NewsList";
 
 export default function Page() {
   return (
-    <Box>
-      <h1>Новости для каждого</h1>
-    </Box>
+    <Container>
+      <Banner />
+      <NewsList />
+    </Container>
   );
 }
