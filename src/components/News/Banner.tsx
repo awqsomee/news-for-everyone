@@ -39,11 +39,11 @@ const Layout = styled.div`
 
 const Cover = styled.div`
   position: absolute;
-  width: 1920px;
+  width: 100vw;
   height: ${bannerHeight};
   color: rgba(113, 79, 207, 0.3);
   background-image: url(${bannerCover.src});
-  background-size: contain;
+  background-size: cover;
 `;
 
 const Title = styled.h1`
