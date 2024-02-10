@@ -16,7 +16,6 @@ export const LabelRow = () => {
 
 const Layout = styled.div`
   display: flex;
-  margin-top: 24px;
 `;
 
 const Reset = styled.button`
