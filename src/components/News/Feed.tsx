@@ -6,5 +6,5 @@ export const Feed = () => {
 };
 
 const Layout = styled.div`
-  margin-top: 42px;
+  height: 1410px;
 `;

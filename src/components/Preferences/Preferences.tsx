@@ -3,6 +3,7 @@ import { Filter } from "./Filter";
 import { Box } from "../Box";
 import { Labels } from "./Labels";
 import { Categories } from "./Categories";
+import styled from "styled-components";
 
 export type Section =
   | "Все"
@@ -109,11 +110,20 @@ export const Preferences = () => {
   const [section, setSection] = useState<Section>("Все");
   return (
     <Box $ai="flex-start">
-      <Box $ai="flex-start">
+      <FilterRow>
         <Filter type="array" current={section} filters={sections} setFilter={(section) => setSection(section)} />
-      </Box>
+        <Labels />
+      </FilterRow>
       {section !== "Все" && <Categories initState={categories[section]} />}
-      <Labels />
     </Box>
   );
 };
+
+const FilterRow = styled.div`
+  display: flex;
+  gap: 48px;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 100%;
+  margin-bottom: 16px;
+`;

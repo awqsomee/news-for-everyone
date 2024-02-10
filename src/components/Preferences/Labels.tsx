@@ -1,5 +1,17 @@
 import React from "react";
+import { Dropdown } from "../shared/Dropdown";
+import styled from "styled-components";
 
 export const Labels = () => {
-  return <div style={{ height: "1600px" }}></div>;
+  return (
+    <Layout>
+      <Dropdown label="Категория" counter={1} />
+      <Dropdown label="Метка" counter={2} />
+    </Layout>
+  );
 };
+
+const Layout = styled.div`
+  display: flex;
+  gap: 10px;
+`;

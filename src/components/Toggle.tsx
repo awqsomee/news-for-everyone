@@ -31,10 +31,9 @@ const Label = styled.label`
 
 const Span = styled.span<{ type?: FilterType }>`
   border: 2px solid ${({ theme, type }) => (type === "secondary" ? theme.secondary : theme.primary)};
-  padding: ${({ theme, type }) => (type === "secondary" ? "8px 16px 9px 16px" : "10px 20px 11px")};
+  padding: ${({ theme, type }) => (type === "secondary" ? "8px 16px 9px 16px" : "10px 20px")};
 
-  /* width: 27px;
-  height: 22px; */
+  height: 43px;
   white-space: nowrap;
   font-family: ${LatoMedium.style.fontFamily};
   font-style: normal;

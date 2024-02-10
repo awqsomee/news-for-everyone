@@ -16,4 +16,8 @@ export const NewsList = () => {
 const Layout = styled.div`
   padding: 90px 0;
   width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
 `;
