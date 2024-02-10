@@ -24,4 +24,11 @@ const Layout = styled.div`
   gap: 5px;
   padding: 8px 7px 9px 16px;
   cursor: pointer;
+
+  &:hover {
+    color: ${({ theme }) => theme.primary};
+  }
+  &:hover path {
+    fill: ${({ theme }) => theme.primary};
+  }
 `;

@@ -29,4 +29,8 @@ const Reset = styled.button`
   line-height: 140%;
   color: ${({ theme }) => theme.secondary};
   cursor: pointer;
+
+  &:hover {
+    color: ${({ theme }) => theme.primary};
+  }
 `;

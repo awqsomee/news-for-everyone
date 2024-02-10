@@ -30,8 +30,8 @@ const Label = styled.label`
 `;
 
 const Span = styled.span<{ type?: FilterType }>`
-  border: 2px solid ${({ theme, type }) => (type === "secondary" ? theme.secondary : theme.primary)};
-  padding: ${({ theme, type }) => (type === "secondary" ? "8px 16px 9px 16px" : "10px 20px")};
+  border: solid ${({ theme, type }) => (type === "secondary" ? theme.secondary + "1px" : theme.primary + "2px")};
+  padding: ${({ type }) => (type === "secondary" ? "8px 16px 9px 16px" : "10px 20px")};
 
   height: 43px;
   white-space: nowrap;
@@ -53,7 +53,7 @@ const InvisibleInput = styled.input`
   position: absolute;
 
   &:checked + ${Span} {
-    border: 2px solid ${({ theme }) => theme.primary};
+    border-color: ${({ theme }) => theme.primary};
     color: ${({ theme }) => theme.primary};
     background-color: ${({ theme }) => theme.contrast};
   }
