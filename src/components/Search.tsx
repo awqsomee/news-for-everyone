@@ -29,6 +29,7 @@ const Input = styled.input`
   color: rgba(255, 255, 255, 1);
   border-bottom: 1px rgba(255, 255, 255, 1) solid;
   background: none;
+  padding-right: 19px;
 
   &:focus {
     outline: none;
@@ -37,7 +38,9 @@ const Input = styled.input`
 
 const IconButton = styled.button`
   position: absolute;
+  top: 0;
   right: 0;
+  padding: 0;
   background: none;
   aspect-ratio: 1;
   border: none;
