@@ -21,11 +21,9 @@ const Layout = styled.div`
 `;
 
 const Input = styled.input`
-  /* all: unset; */
-
   border: none;
   width: 100%;
-  height: 20px;
+  height: 21px;
   color: rgba(255, 255, 255, 1);
   border-bottom: 1px rgba(255, 255, 255, 1) solid;
   background: none;
