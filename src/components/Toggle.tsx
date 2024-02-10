@@ -31,9 +31,9 @@ const Label = styled.label`
 
 const Span = styled.span<{ type?: FilterType }>`
   border: solid ${({ theme, type }) => (type === "secondary" ? theme.secondary + "1px" : theme.primary + "2px")};
-  padding: ${({ type }) => (type === "secondary" ? "8px 16px 9px 16px" : "10px 20px")};
+  padding: ${({ type }) => (type === "secondary" ? "7px 15px 8px 15px" : "8px 18px 9px 18px")};
+  vertical-align: text-top;
 
-  height: 43px;
   white-space: nowrap;
   font-family: ${LatoMedium.style.fontFamily};
   font-style: normal;

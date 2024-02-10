@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import bannerCover from "/public/images/bannerCover.png";
-import { BebasNeueRegular } from "../../pages/_app";
+import { BebasNeueRegular, LatoSemiBold } from "../../pages/_app";
 import { Container } from "../Container";
 
 export const Banner = () => {
@@ -51,7 +51,7 @@ const Title = styled.h1`
   font-family: ${BebasNeueRegular.style.fontFamily};
   font-weight: 400;
   font-size: 158px;
-  line-height: 190px;
+  line-height: 158px;
   width: 876px;
   top: 150px;
   left: 0;
@@ -59,6 +59,7 @@ const Title = styled.h1`
 `;
 
 const SubTitle = styled.h2`
+  font-family: ${LatoSemiBold.style.fontFamily};
   position: relative;
   grid-column: 10/13;
   font-weight: 500;

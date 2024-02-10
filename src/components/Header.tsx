@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Search } from "./Search";
-import { BebasNeueRegular } from "../pages/_app";
+import { BebasNeueBook, BebasNeueRegular } from "../pages/_app";
 import { Center } from "../ui/Center";
 import { Box } from "./Box";
 import { Container } from "./Container";
@@ -33,7 +33,7 @@ const Layout = styled.div`
 `;
 
 const Logo = styled.div`
-  font-family: ${BebasNeueRegular.style.fontFamily};
+  font-family: ${BebasNeueBook.style.fontFamily};
   font-size: 22px;
   line-height: 120%;
   letter-spacing: 0.02em;

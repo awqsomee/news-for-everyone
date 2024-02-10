@@ -7,7 +7,9 @@ import favicon from "/public/images/favicon.ico";
 import { Center } from "../ui/Center";
 
 export const BebasNeueRegular = localFont({ src: "../fonts/BebasNeue-Regular.ttf" });
+export const BebasNeueBook = localFont({ src: "../fonts/BebasNeue-Book.ttf" });
 export const LatoMedium = localFont({ src: "../fonts/Lato-Medium.ttf" });
+export const LatoSemiBold = localFont({ src: "../fonts/Lato-SemiBold.ttf" });
 
 const theme = {
   primary: "rgba(1, 28, 39, 1)",
