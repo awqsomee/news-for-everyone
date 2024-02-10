@@ -14,4 +14,6 @@ export const Labels = () => {
 const Layout = styled.div`
   display: flex;
   gap: 10px;
+  height: 43px;
+  align-items: center;
 `;

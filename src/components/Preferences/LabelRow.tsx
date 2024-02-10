@@ -16,6 +16,16 @@ export const LabelRow = () => {
 
 const Layout = styled.div`
   display: flex;
+  overflow-y: auto;
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 `;
 
 const Reset = styled.button`
@@ -28,6 +38,7 @@ const Reset = styled.button`
   line-height: 140%;
   color: ${({ theme }) => theme.secondary};
   cursor: pointer;
+  white-space: nowrap;
 
   &:hover {
     color: ${({ theme }) => theme.primary};

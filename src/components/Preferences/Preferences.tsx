@@ -110,22 +110,24 @@ const categories = {
 export const Preferences = () => {
   const [section, setSection] = useState<Section>("Все");
   return (
-    <Box $ai="flex-start">
-      <FilterRow>
+    <FilterRow>
+      <Container>
         <Filter type="array" current={section} filters={sections} setFilter={(section) => setSection(section)} />
-        <Labels />
-      </FilterRow>
-      {section !== "Все" && <Categories initState={categories[section]} />}
-      <LabelRow />
-    </Box>
+        {section !== "Все" && <Categories initState={categories[section]} />}
+        <LabelRow />
+      </Container>
+      <Labels />
+    </FilterRow>
   );
 };
 
 const FilterRow = styled.div`
   display: flex;
   gap: 48px;
-  align-items: center;
   justify-content: flex-start;
   max-width: 100%;
-  margin-bottom: 16px;
+`;
+
+const Container = styled.div`
+  overflow: hidden;
 `;

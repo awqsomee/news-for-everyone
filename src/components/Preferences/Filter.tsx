@@ -75,6 +75,7 @@ const Layout = styled.div`
   gap: 10px;
   align-items: center;
   height: 43px;
+  margin-bottom: 16px;
 
   /* Hide scrollbar for Chrome, Safari and Opera */
   &::-webkit-scrollbar {

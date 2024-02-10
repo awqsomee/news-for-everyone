@@ -18,6 +18,6 @@ export const Categories = ({ initState }: { initState: Record<string, boolean> }
 
 const Layout = styled.div`
   & + div {
-    margin-top: 24px;
+    padding-top: 8px;
   }
 `;
