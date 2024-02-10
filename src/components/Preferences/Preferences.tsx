@@ -4,6 +4,7 @@ import { Box } from "../Box";
 import { Labels } from "./Labels";
 import { Categories } from "./Categories";
 import styled from "styled-components";
+import { LabelRow } from "./LabelRow";
 
 export type Section =
   | "Все"
@@ -115,6 +116,7 @@ export const Preferences = () => {
         <Labels />
       </FilterRow>
       {section !== "Все" && <Categories initState={categories[section]} />}
+      <LabelRow />
     </Box>
   );
 };
