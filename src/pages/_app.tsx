@@ -16,6 +16,9 @@ const theme = {
   contrast: "rgba(245, 237, 240, 1)",
   secondary: "rgba(167, 158, 183, 1)",
   accent: "rgba(205, 143, 197, 1)",
+  green: "rgba(165, 253, 54, 1)",
+  red: "rgba(253, 66, 54, 1)",
+  grey: "rgba(203, 192, 192, 1)",
 };
 
 const GlobalStyles = createGlobalStyle`
